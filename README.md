@@ -1,13 +1,13 @@
-# LFM: [A Novel Local Focusing Mechanism for Deepfake Detection Generalization] (BMVC 2025)
+# LFM (BMVC 2025)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
-[![Pytorch](https://img.shields.io/badge/PyTorch-1.12+-red.svg)](https://pytorch.org/)
+[![Pytorch](https://img.shields.io/badge/PyTorch-2.6.0+-red.svg)](https://pytorch.org/)
 
-Official PyTorch implementation of **LFM** (BMVC 2025). This repository contains training and evaluation code for our paper "[A Novel Local Focusing Mechanism for Deepfake Detection Generalization]" accepted at BMVC 2025.
+Official PyTorch implementation of **LFM** (BMVC 2025). This repository contains training and evaluation code for our paper "[A Novel Local Focusing Mechanism for Deepfake Detection Generalization]()" accepted at BMVC 2025.
 
-## 📌 Overview
-
+## 📌 LFM Visualization
+<img src="images/visua.png" width="100%" alt="visualization of LFM" />
 
 ## 📦 Installation
 
@@ -50,6 +50,7 @@ Download dataset from [CNNDetection CVPR2020 (Table1 results)](https://github.co
 #### Data structure
 <details>
 <summary> Click to expand the folder tree structure. </summary>
+
 ```
 datasets
 |-- ForenSynths_train_val
@@ -121,7 +122,7 @@ datasets
 
 ### Training
 ```bash
-python train.py --name lfm --dataroot datas --classes car,cat,chair,horse \
+python train.py --name lfm --dataroot ./datasets --classes car,cat,chair,horse \
        --batch_size 32 --delr_freq 10 --lr 0.0001 --niter 50
 ```
 

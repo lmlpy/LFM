@@ -6,9 +6,6 @@
 
 Official PyTorch implementation of **LFM** (BMVC 2025). This repository contains training and evaluation code for our paper "[A Novel Local Focusing Mechanism for Deepfake Detection Generalization]()" accepted at BMVC 2025.
 
-## 📌 LFM Visualization
-<img src="images/visua.pdf" width="100%" alt="visualization of LFM" />
-
 ## 📦 Installation
 
 ### Prerequisites
@@ -131,6 +128,11 @@ python train.py --name lfm --dataroot ./datasets --classes car,cat,chair,horse \
 python test.py --model_dir ./weights/bs_model.pth --batch_size 32
 ```
 
-### Acknowledgments
+## 📌 LFM Visualization
+<img src="images/visual.jpg" width="100%" alt="visualization of LFM" />
+
+## Acknowledgments
 This repository borrows partially from the [NPR](https://github.com/chuangchuangtan/NPR-DeepfakeDetection).
 
+## 📜 Citation
+If you find this repository useful for your research, please consider citing:

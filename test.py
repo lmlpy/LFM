@@ -28,30 +28,30 @@ def seed_torch(seed=1029):
 
 seed_torch(100)
 DetectionTests = {
-    'Diffusion1kStep': {'dataroot': '../NPR-DeepfakeDetection/datasets/Generalization_Test/Diffusion1kStep/',
+    'Diffusion1kStep': {'dataroot': './datasets/Generalization_Test/Diffusion1kStep/',
                         'no_resize': False,
                         # Due to the different shapes of images in the dataset, resizing is required during batch detection.
                         'no_crop': True,
                         },
 
-    'ForenSynths': {'dataroot': '../NPR-DeepfakeDetection/datasets/Generalization_Test/ForenSynths_test/',
+    'ForenSynths': {'dataroot': './datasets/Generalization_Test/ForenSynths_test/',
                     'no_resize': False,
                     # Due to the different shapes of images in the dataset, resizing is required during batch detection.
                     'no_crop': True,
                     },
 
-    'GANGen-Detection': {'dataroot': '../NPR-DeepfakeDetection/datasets/Generalization_Test/GANGen-Detection/',
+    'GANGen-Detection': {'dataroot': './datasets/Generalization_Test/GANGen-Detection/',
                          'no_resize': True,
                          'no_crop': True,
                          },
 
-    'DiffusionForensics': {'dataroot': '../NPR-DeepfakeDetection/datasets/Generalization_Test/DiffusionForensics/',
+    'DiffusionForensics': {'dataroot': './datasets/Generalization_Test/DiffusionForensics/',
                            'no_resize': False,
                            # Due to the different shapes of images in the dataset, resizing is required during batch detection.
                            'no_crop': True,
                            },
 
-    'UniversalFakeDetect': {'dataroot': '../NPR-DeepfakeDetection/datasets/Generalization_Test/UniversalFakeDetect/',
+    'UniversalFakeDetect': {'dataroot': './datasets/Generalization_Test/UniversalFakeDetect/',
                             'no_resize': False,
                             # Due to the different shapes of images in the dataset, resizing is required during batch detection.
                             'no_crop': True,
@@ -67,10 +67,10 @@ model = LFMSN()
 model.load_state_dict(torch.load(opt.model_path, map_location='cpu'), strict=True)
 model.cuda()
 model.eval()
-summary(model.cuda(), (3, 256, 256))
-input = torch.randn(1, 3, 256, 256).cuda()
-flops, params = profile(model, inputs=(input,))
-print(f'FLOPs: {flops / 1e9} GFLOPs, Params: {params / 1e6} M')
+#summary(model.cuda(), (3, 256, 256))
+#input = torch.randn(1, 3, 256, 256).cuda()
+#flops, params = profile(model, inputs=(input,))
+#print(f'FLOPs: {flops / 1e9} GFLOPs, Params: {params / 1e6} M')
 tatol_accs = []
 tatol_aps = []
 for testSet in DetectionTests.keys():

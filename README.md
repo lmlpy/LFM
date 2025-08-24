@@ -125,7 +125,7 @@ python train.py --name lfm --dataroot ./datasets --classes car,cat,chair,horse \
 
 ### Testing
 ```bash
-python test.py --model_dir ./weights/bs_model.pth --batch_size 32
+python test.py --model_path ./weights/bs_model.pth --batch_size 32
 ```
 
 ## 📌 LFM Visualization

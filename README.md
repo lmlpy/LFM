@@ -4,7 +4,7 @@
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![Pytorch](https://img.shields.io/badge/PyTorch-2.6.0+-red.svg)](https://pytorch.org/)
 
-Official PyTorch implementation of **LFM** (BMVC 2025). This repository contains training and evaluation code for our paper "[A Novel Local Focusing Mechanism for Deepfake Detection Generalization]()" accepted at BMVC 2025.
+Official PyTorch implementation of **LFM** (BMVC 2025). This repository contains training and evaluation code for our paper "[A Novel Local Focusing Mechanism for Deepfake Detection Generalization](https://arxiv.org/abs/2508.17029)" accepted at BMVC 2025.
 
 ## 📦 Installation
 
@@ -34,15 +34,15 @@ pip install -r requirements.txt
 <!-- 
 Download dataset from [CNNDetection CVPR2020 (Table1 results)](https://github.com/peterwang512/CNNDetection), [GANGen-Detection (Table2 results)](https://github.com/chuangchuangtan/GANGen-Detection) ([googledrive](https://drive.google.com/drive/folders/11E0Knf9J1qlv2UuTnJSOFUjIIi90czSj?usp=sharing)), [UniversalFakeDetect CVPR2023](https://github.com/Yuheng-Li/UniversalFakeDetect) ([googledrive](https://drive.google.com/drive/folders/1nkCXClC7kFM01_fqmLrVNtnOYEFPtWO-?usp=drive_link)), [DIRE 2023ICCV](https://github.com/ZhendongWang6/DIRE) ([googledrive](https://drive.google.com/drive/folders/1jZE4hg6SxRvKaPYO_yyMeJN_DOcqGMEf?usp=sharing)), Diffusion1kStep [googledrive](https://drive.google.com/drive/folders/14f0vApTLiukiPvIHukHDzLujrvJpDpRq?usp=sharing).
 -->
-|                        | paper  | Url  |
-|:----------------------:|:-----:|:-----:|
-| Train set              | [CNNDetection CVPR2020](https://github.com/PeterWang512/CNNDetection)                   | [Baidudrive](https://pan.baidu.com/s/1l-rXoVhoc8xJDl20Cdwy4Q?pwd=ft8b)                 | 
-| Val   set              | [CNNDetection CVPR2020](https://github.com/PeterWang512/CNNDetection)                   | [Baidudrive](https://pan.baidu.com/s/1l-rXoVhoc8xJDl20Cdwy4Q?pwd=ft8b)                 | 
-| Table1 Test            | [CNNDetection CVPR2020](https://github.com/PeterWang512/CNNDetection)                   | [Baidudrive](https://pan.baidu.com/s/1l-rXoVhoc8xJDl20Cdwy4Q?pwd=ft8b)                 | 
-| Table2 Test            | [FreqNet AAAI2024](https://github.com/chuangchuangtan/FreqNet-DeepfakeDetection)        | [googledrive](https://drive.google.com/drive/folders/11E0Knf9J1qlv2UuTnJSOFUjIIi90czSj?usp=sharing)   | 
-| Table3 Test            | [DIRE ICCV2023](https://github.com/ZhendongWang6/DIRE)                                  | [googledrive](https://drive.google.com/drive/folders/1jZE4hg6SxRvKaPYO_yyMeJN_DOcqGMEf?usp=sharing)   | 
-| Table4 Test            | [UniversalFakeDetect CVPR2023](https://github.com/Yuheng-Li/UniversalFakeDetect)        | [googledrive](https://drive.google.com/drive/folders/1nkCXClC7kFM01_fqmLrVNtnOYEFPtWO-?usp=sharing)| 
-| Table5 Test            | Diffusion1kStep                                                                         | [googledrive](https://drive.google.com/drive/folders/14f0vApTLiukiPvIHukHDzLujrvJpDpRq?usp=sharing)   | 
+|                        |                                      paper                                       | Url  |
+|:----------------------:|:--------------------------------------------------------------------------------:|:-----:|
+| Train set              |      [CNNDetection CVPR2020](https://github.com/PeterWang512/CNNDetection)       | [Baidudrive](https://pan.baidu.com/s/1l-rXoVhoc8xJDl20Cdwy4Q?pwd=ft8b)                 | 
+| Val   set              |      [CNNDetection CVPR2020](https://github.com/PeterWang512/CNNDetection)       | [Baidudrive](https://pan.baidu.com/s/1l-rXoVhoc8xJDl20Cdwy4Q?pwd=ft8b)                 | 
+| Table1 Test            |      [CNNDetection CVPR2020](https://github.com/PeterWang512/CNNDetection)       | [Baidudrive](https://pan.baidu.com/s/1l-rXoVhoc8xJDl20Cdwy4Q?pwd=ft8b)                 | 
+| Table2 Test            | [FreqNet AAAI2024](https://github.com/chuangchuangtan/FreqNet-DeepfakeDetection) | [googledrive](https://drive.google.com/drive/folders/11E0Knf9J1qlv2UuTnJSOFUjIIi90czSj?usp=sharing)   | 
+| Table3 Test            |              [DIRE ICCV2023](https://github.com/ZhendongWang6/DIRE)              | [googledrive](https://drive.google.com/drive/folders/1jZE4hg6SxRvKaPYO_yyMeJN_DOcqGMEf?usp=sharing)   | 
+| Table4 Test            | [UniversalFakeDetect CVPR2023](https://github.com/Yuheng-Li/UniversalFakeDetect) | [googledrive](https://drive.google.com/drive/folders/1nkCXClC7kFM01_fqmLrVNtnOYEFPtWO-?usp=sharing)| 
+| Table5 Test            |                 [NPR CVPR2024](https://arxiv.org/abs/2312.10461)                 | [googledrive](https://drive.google.com/drive/folders/14f0vApTLiukiPvIHukHDzLujrvJpDpRq?usp=sharing)   | 
 
 #### Data structure
 <details>
@@ -136,3 +136,14 @@ This repository borrows partially from the [NPR](https://github.com/chuangchuang
 
 ## 📜 Citation
 If you find this repository useful for your research, please consider citing:
+```bibtex
+@misc{li2025novellocalfocusingmechanism,
+      title={A Novel Local Focusing Mechanism for Deepfake Detection Generalization}, 
+      author={Mingliang Li and Lin Yuanbo Wu and Changhong Liu and Hanxi Li},
+      year={2025},
+      eprint={2508.17029},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.17029}, 
+}
+```

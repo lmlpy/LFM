@@ -132,7 +132,7 @@ python test.py --model_path ./weights/bs_model.pth --batch_size 32
 <img src="images/visual.jpg" width="100%" alt="visualization of LFM" />
 
 ## Acknowledgments
-This repository borrows partially from the [NPR](https://github.com/chuangchuangtan/NPR-DeepfakeDetection).
+This repository borrows partially from the [NPR]().
 
 ## 📜 Citation
 If you find this repository useful for your research, please consider citing:

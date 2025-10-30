@@ -116,3 +116,7 @@ class BaseOptions():
 
         self.opt = opt
         return self.opt
+e ValueError("Shouldn't have more than 2 values for --jpg_qual.")
+
+        self.opt = opt
+        return self.opt

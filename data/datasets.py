@@ -136,4 +136,6 @@ rz_dict = {'bilinear': InterpolationMode.BILINEAR,
            'nearest': InterpolationMode.NEAREST}
 def custom_resize(img, opt):
     interp = sample_discrete(opt.rz_interp)
+    return TF.resize(img, (opt.loadSize,opt.loadSize), interpolation=rz_dict[interp]) opt):
+    interp = sample_discrete(opt.rz_interp)
     return TF.resize(img, (opt.loadSize,opt.loadSize), interpolation=rz_dict[interp])

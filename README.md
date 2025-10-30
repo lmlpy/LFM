@@ -119,7 +119,7 @@ datasets
 
 ### Training
 ```bash
-python train.py --name lfm --dataroot ./datasets --classes car,cat,chair,horse \
+python train.py --name lfm --dataroot ./datasets/ForenSynths_train_val --classes car,cat,chair,horse \
        --batch_size 32 --delr_freq 10 --lr 0.0001 --niter 50
 ```
 
@@ -132,7 +132,7 @@ python test.py --model_path ./weights/bs_model.pth --batch_size 32
 <img src="images/visual.jpg" width="100%" alt="visualization of LFM" />
 
 ## Acknowledgments
-This repository borrows partially from the [NPR]().
+This repository borrows partially from the [NPR](https://github.com/chuangchuangtan/NPR-DeepfakeDetection).
 
 ## 📜 Citation
 If you find this repository useful for your research, please consider citing:

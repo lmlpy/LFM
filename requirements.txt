@@ -32,3 +32,4 @@ torchsummary==1.5.1
 torchvision==0.23.0
 triton==3.4.0
 typing_extensions==4.14.1
+tensorboardX==2.6.4

@@ -68,3 +68,7 @@ class Trainer(BaseModel):
         self.loss.backward()
         self.optimizer.step()
 
+rad()
+        self.loss.backward()
+        self.optimizer.step()
+

@@ -40,3 +40,5 @@ def create_dataloader(opt):
                                               sampler=sampler,
                                               num_workers=int(opt.num_threads))
     return data_loader
+pt.num_threads))
+    return data_loader

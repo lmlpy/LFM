@@ -14,7 +14,7 @@ class RankBasedLinearDropout(nn.Module):
 
         sorted_x, indices = torch.sort(x, dim=-1, descending=False) # 沿最后一个维度排序
         N = x.size(-1) # 生成线性概率 (0.2~0.5)
-        ranks = torch.linspace(self.pmin, self.pmin, N, device=x.device)
+        ranks = torch.linspace(self.pmin, self.pmax, N, device=x.device)
         inv_indices = torch.argsort(indices, dim=-1) # 根据原位置恢复概率分布
         probs = torch.gather(ranks.expand_as(x), -1, inv_indices)
         mask = (torch.rand_like(x) > probs).float() # 生成掩码并保持期望
@@ -158,7 +158,7 @@ class AttentionPooling(nn.Module):
         return feature_vector
 
 class LFMSN(nn.Module):
-    def __init__(self, num_classes=1, factor=2, rbld=True, rks=False):
+    def __init__(self, num_classes=1, factor=2, rbld=True, rks=True):
         super(LFMSN, self).__init__()
         self.factor = factor
 
@@ -235,6 +235,14 @@ class LFMSN(nn.Module):
         maps = self.cnn(abs(NPR))
         maps = self.covn1_1(maps)
         vector = self.pool_adapter(maps).reshape(self.pool_adapter(maps).size(0), -1)
+        out = self.fc1(vector)
+
+        if self.rsk:
+            vector_assist = self.RSK_module(maps).reshape(maps.size(0), -1)
+            out_assist = self.fc1(vector_assist)
+            return out, out_assist
+
+        return out, out
         out = self.fc1(vector)
 
         if self.rsk:

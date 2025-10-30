@@ -24,3 +24,5 @@ class TrainOptions(BaseOptions):
         # parser.add_argument('--no_crop', action='store_true')
         self.isTrain = True
         return parser
+e
+        return parser

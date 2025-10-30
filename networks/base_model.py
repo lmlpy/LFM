@@ -61,6 +61,7 @@ class BaseModel(nn.Module):
 
     def train(self):
         self.model.train()
+        self.train = self.eval
 
     def test(self):
         with torch.no_grad():
@@ -88,4 +89,6 @@ def init_weights(net, init_type='normal', gain=0.02):
             init.constant_(m.bias.data, 0.0)
 
     print('initialize network with %s' % init_type)
+    net.apply(init_func)
+ze network with %s' % init_type)
     net.apply(init_func)
